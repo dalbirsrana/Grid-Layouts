@@ -1,0 +1,311 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #262653;
+
+    display: grid;
+    grid-template-columns: 40px calc(100vw - 40px);
+}
+
+.wrapper, 
+.poems {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} 
+
+.style-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 100vh;
+    background-color: #06050a;
+}
+
+.style-switcher button {
+    font-size: 0.8rem;
+    color: #272622;
+    flex-basis: 28px;
+    width:28px;
+    background-color: #b7caee;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 3px;
+    cursor: pointer;
+}
+
+button:hover,
+button:active,
+button:focus {
+    background-color:burlywood;
+    color: antiquewhite;
+} 
+
+.wrapper .item {
+    background-color: #3c3c77;
+    color: #ccc;
+    padding: 0.5rem;
+}
+
+/* css for .wrapper class ================ */
+
+/* .example1 */
+.example1-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;    
+    grid-template-columns: repeat(5, 1fr) ;
+}
+
+/* .example2 */
+.example2-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 300px repeat(4, 1fr);
+}
+
+/* .example3 */
+.example3-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 300px 1fr 300px;
+}
+
+/* .example4 */
+.example4-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 3fr 1fr 1fr;
+}
+
+/* common grid layout 7 x 4 for .example5, .example6, .example7, .example8, example10 */
+.example5-active .wrapper,
+.example6-active .wrapper,
+.example7-active .wrapper,
+.example8-active .wrapper,
+.example10-active .wrapper
+ {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/* .example5 - .item01 positioning */
+.example5-active .item01 {
+    grid-column: 1 / 5;
+    background-color: #73738d;
+}
+
+/* .example6 - .item04 positioning */
+.example6-active .item04 {
+    grid-column: 4 / span 4;
+    background-color: #73738d;
+}
+
+/* .example7 - .item01 positioning */
+.example7-active .item01 {
+    grid-row: 1 / span 4;
+    background-color: #73738d;
+}
+
+/* .example8 - .item01 positioning */
+.example8-active .item01 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+    background-color: #73738d;
+}
+
+/* .example9 */
+.example9-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* .example9 - .item01 positioning */
+.example9-active .item01 {
+    grid-column: 7 / 8;
+    grid-row: 2 / 3;
+    background-color: #73738d;
+}
+
+/* .example10 - .item01 positioning */
+.example10-active .item01 {
+    grid-column: 6 / 8;
+    grid-row: 1 / 3;
+    background-color: #73738d;
+}
+
+/* .example11  */
+.example11-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* .example11 - .item01 positioning */
+.example11-active .item01 {
+    grid-column: 3 / span 3;
+    grid-row: 1 / 6;
+    background-color: #73738d;
+}
+
+/* .example12  */
+.example12-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr 3fr 2fr 1fr 3fr 1fr;
+}
+
+/* .example13  */
+.example13-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(4, minmax(200px, 400px));
+}
+
+/* common grid layout 5 columns for .example14, .example15, .example16 */
+.example14-active .wrapper,
+.example15-active .wrapper,
+.example16-active .wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* .example14  */
+.example14-active .wrapper {
+    grid-gap: 0;
+}
+.example14-active .item01 {
+    grid-column: 2;
+    grid-row: 1; 
+}
+.example14-active .item02 {
+    grid-column: 4; 
+    grid-row: 1; 
+}
+.example14-active .item03 {
+    grid-column: 1;
+    grid-row: 2;  
+}
+.example14-active .item04 {
+    grid-column: 3;
+    grid-row: 2; 
+}
+.example14-active .item05 {
+    grid-column: 5;
+    grid-row: 2; 
+}
+.example14-active .item06 {
+    grid-column: 2;
+    grid-row: 3; 
+}
+.example14-active .item07 {
+    grid-column: 4;
+    grid-row: 3; 
+}
+.example14-active .item08 {
+    grid-column: 1;
+    grid-row: 4; 
+}
+.example14-active .item09 {
+    grid-column: 3;
+    grid-row: 4; 
+}
+.example14-active .item10 {
+    grid-column: 5;
+    grid-row: 4; 
+}
+
+.example14-active .wrapper .item:nth-child(n+11) {
+    display: none;
+}
+/* .example14 ends */
+
+/* .example15 */
+.example15-active .wrapper .item {
+    text-align: right;
+}
+
+/* .example16 */
+.example16-active .wrapper .item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .poems - setting background for all poem boxes */
+.poems .poem {
+    background-color: #3c3c77;
+    color: #ccc;
+    padding: 0.5rem;
+}
+
+/* common grid layout 3 X 3 - .example17, .example18, .example19 */
+.example17-active .poems,
+.example18-active .poems,
+.example19-active .poems {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* .example17 */
+.example17-active .poem {
+    display: grid;
+    align-content: space-between;
+}
+
+/* .example17 setting font size for number */
+.example17-active .poem-number {
+    font-size: 3rem;
+}
+
+/* .example18 */
+.example18-active .poem {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 3rem auto;
+    align-content: center;
+}
+
+/* .example18 setting font size for number */
+.example18-active .poem-number {
+    font-size: 5rem;
+    line-height: 0.8;
+}
+
+/* .example19 */
+.example19-active .poem {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: 1fr;
+    align-content: center;
+}
+
+/* .example19 settings for poem number */
+.example19-active .poem-number {
+    align-self: stretch;
+    background-color: #b7caee;
+    color: #272622;
+    font-size: 4rem;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+} 
+
+/* .example19 - setting for poem text */
+.example19-active .poem-text {
+    align-self: center;
+} 
